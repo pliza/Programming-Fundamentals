@@ -1,8 +1,8 @@
 /**
  * Done by:
- * Student Name: Severyn Kotyhoroshko
- * Student Group: 123
- * Lab 1.5
+ * Student Name: Liza Rabirokh
+ * Student Group: 121
+ 
  */
 
 #include <iostream>
