@@ -24,7 +24,6 @@ int main()
     float fltC = 34;
     bool bRez2 = !( ! (nA > nB2) && !(fltC > nD2));
     }
-
 {
     int const CONSTA = 71; 
     int nB, nD, nE;
