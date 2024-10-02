@@ -24,9 +24,7 @@ int main()
     float fltC = 34;
     bool bRez2 = !( ! (nA > nB2) && !(fltC > nD2));
     }
-//A <БО1> <УО> B <АО1> <СО> C <ОВ> D <АО2> E <БО2> <БазО> F
-//БО1БО2АО1АО2 УО СО БазО ОВ
-//& >> + *    ~ * sizeof !=
+
 {
     int const CONSTA = 71; 
     int nB, nD, nE;
