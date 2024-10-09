@@ -24,6 +24,7 @@ int main()
         cout << "Число не парне" << endl;
 
     // 2. Підрахунок кількості одиничних бітів
+
     int nB = 78;
     int ones = 0;
     cout << "Число " << nB << " у двійковій системі: " << bitset<32>(nB) << endl;
@@ -38,19 +39,12 @@ int main()
     cout << "Кількість одиниць: " << ones << endl;
 
     // 3. Перевірка встановленого біта на певній позиції
-    int nC = 150;
-    int pos = 0;
+
+    int nC = 342;
+    int pos = 2;
+
     cout << "Число " << nC << " у двійковій системі: " << bitset<32>(nC) << endl;
 
-    int result1 = (nC & (1 << pos));
-    if (result1)
-    {
-        cout << "1" << endl;
-    }
-    else
-    {
-        cout << "0" << endl;
-    }
-
+    cout << bool(nC & (1 << pos)) << endl;
     return 0;
 }
