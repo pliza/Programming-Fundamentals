@@ -22,6 +22,8 @@ int main() {
         bool res = (!(a == b) ^ (!(c != d)));
         cout << "res: " << boolalpha << res << endl;
     }
+     // 010101
+     // 101011
 
     {
         int a = 10;
