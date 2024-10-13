@@ -15,70 +15,64 @@ using namespace std;
 int main()
 {
 
-    /*.
-    Задано ціле значення А. Визначити, яких бітів (0 чи 1)
-    більше в його двійковому поданні.
-    */
+    // 10 '>', '7', 'R'       0x1a, 0x32, 0x63
 
-    int a = 543443534;
-    int ones = 0;
-    int zeros = 0;
-    cout << "Число 5 у двійковій системі: " << bitset<32>(a) << endl;
+    const char CONST1 = 10;
+    char chVar1;
+    chVar1 = '>';
+    char chVar2 = '7';
+    char chVar3 = 'R';
 
-    for (int i = 0; i < 32; i++)
-    {
-        if (a & (1 << i))
-        {
-            ones++;
-        }
-        else
-        {
-            zeros++;
-        }
-    }
-    cout << "Кількість одиниць: " << ones << endl;
-    cout << "Кількість нулів: " << zeros << endl;
+    const char CONST2 = 0x1a;
+    char chVar4;
+    chVar4 = 0x32;
+    char chVar5 = 0x63;
 
-    if (ones > zeros)
-    {
-        cout << "Одиниць більше." << endl;
-    }
-    else if (zeros > ones)
-    {
-        cout << "Нулів більше." << endl;
-    }
-    else
-    {
-        cout << "Кількість нулів і одиниць однакова." << endl;
-    }
+    // int float unsigned short
+    // 682 -8.4e2    25921
 
-    {
-        /**
-         * 2. Задано дві послідовності, які складаються з 0 та 1.
-    Скласти специфікацію для моделювання операцій XOR.
-         */
-        vector<int> arr = {0, 0, 1, 0};
-        vector<int> arr1 = {
-            0,
-            1,
-            0,
-            1,
-        };
+    int nA = 682;
+    float nB = -8.4e2;
+    unsigned short nC = 25921;
 
-        int minSize = min(arr.size(), arr1.size());
-        vector<int> arr2(minSize);
+    double nD;
+    int nG;
+    char nK;
 
-        // Виконання операції XOR
+    // неявне приведення типів
 
-        for (int i = 0; i < minSize; ++i)
-        {
-            arr2[i] = arr[i] ^ arr1[i];
-        }
-        cout << "Результат XOR: ";
+    nD = nA;
+    nG = nB;
+    nK = nC;
 
-        for (int i = 0; i < minSize; ++i)
-        {
-            cout << arr2[i] << endl;
-        }
-    }
+    // явне приведення типів
+    nD = (double)nA;
+    nG = (int)nB;
+    nK = (char)nC;
+
+    cout << "nD (double) = " << nD << endl;
+    cout << "nG (int) = " << nG << endl;
+    cout << "nK (char) = " << nK << endl;
+
+    // з обходом суворої типізації
+    double *pnD;
+    void *pV;
+
+    pV = &nA;
+    pnD = (double *)pV;
+    nD = *pnD;
+
+    int *pnG;
+    pV = &nB;
+    pnG = (int *)pV;
+    nG = *pnG;
+
+    char *pnK;
+    pV = &nC;
+    pnK = (char *)pV;
+    nK = *pnK;
+
+    cout << "nD (double)" << nD << endl;
+    cout << "nG (int)" << nG << endl;
+    cout << "nK (char)" << nK << endl;
 }
