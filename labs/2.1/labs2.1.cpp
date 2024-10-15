@@ -9,6 +9,10 @@
 #include <vector>
 using namespace std;
 
+// Написати програму, яка складається з наступних дій:
+// 1. 2. Опису змінної індексованого типу згідно з варіантом (табл. 19).
+// Ініціювання цієї змінної виразом згідно з варіантом.
+// 3. Обробки змінної індексованого типу.
 int main()
 {
     int arr1[11];
@@ -24,10 +28,14 @@ int main()
         }
     }
     int size = 11;
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr1[i] << " ";
+    }
 
     for (int i = 0; i < size - 1; i++)
     {
-        for (int j = 0; j < size - i - 1; j++)
+        for (int j = 0; j < size - 1; j++)
         {
             if (arr1[j] > arr1[j + 1])
             {
@@ -36,6 +44,11 @@ int main()
                 arr1[j + 1] = temp;
             }
         }
+    }
+    cout << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr1[i] << " ";
     }
     //  Завдання 2
     char arr5[10]; // 1
