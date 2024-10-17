@@ -15,7 +15,8 @@ using namespace std;
 // 3. Обробки змінної індексованого типу.
 int main()
 {
-    int arr1[11];
+    int size = 11;
+    int arr1[size];
     for (int i = 0; i < 11; i++)
     {
         if (i % 2 == 0)
@@ -27,7 +28,6 @@ int main()
             arr1[i] = 7 + i;
         }
     }
-    int size = 11;
     for (int i = 0; i < size; i++)
     {
         cout << arr1[i] << " ";
@@ -123,27 +123,10 @@ int main()
                 arr8[i] /= countNegative;
             }
         }
-    }
-
-    {
-        float arr[4][5] = {
-            {1.1, -2.0, -8.34, 5.5, 1.2},
-            {-0.2, 1.34, 2.2, -3.5, 1.1},
-            {-2.9, -3.1, 4.4, 7.2, -8.1},
-            {-2.6, -1.2, 3.4, 5.4, 6.6}};
-        float arr9[5]; // 1
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 4; i++)
         {
-            arr9[i] = 1;
-            for (int j = 0; j < 5; j++)
-            {
-                float mult = 1;
-                for (int i = 0; i < 4; i++)
-                {
-                    mult *= arr[i][j];
-                }
-                arr9[j] = mult;
-            }
+            cout << arr8[i] << " ";
         }
+        cout << endl;
     }
 }

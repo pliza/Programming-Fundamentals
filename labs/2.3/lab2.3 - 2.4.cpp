@@ -4,6 +4,7 @@
  * Student Group: 121 1groups
  */
 #include <iostream>
+#include <vector>
 #include <string>
 #include <fstream> // Для роботи з файлами
 
@@ -27,30 +28,34 @@ int main()
     for (int level = 1; level <= n; level++)
     {
         int rows = level + 2;
+        int col = 2 * n + 3;
+        int nm = n;
+        vector<vector<char>> tree(rows, vector<char>(col, ' '));
         for (int row = 1; row <= rows; row++)
         {
-            for (int space = 2; space <= n + 3 - row; space++)
-            {
-                cout << " ";
-                outFile << " ";
-            }
-            cout << green;
             for (int star = 1; star <= 2 * row - 1; star++)
             {
+
                 if (rand() % 5 == 0)
                 {
                     char toy = toys[rand() % toys.length()];
-                    cout << toy;
-                    outFile << toy;
+                    tree[row - 1][n + star + 1 - row] = toy;
                 }
                 else
                 {
-                    cout << "*";
-                    outFile << "*";
+                    tree[row - 1][n + star + 1 - row] = '*';
                 }
             }
-
-            cout << reset << endl;
+        }
+        for (int i = 0; i < tree.size(); i++)
+        {
+            for (int j = 0; j < tree[i].size(); j++)
+            {
+                cout << green;
+                cout << tree[i][j];
+                outFile << tree[i][j];
+            }
+            cout << endl;
             outFile << endl;
         }
     }
