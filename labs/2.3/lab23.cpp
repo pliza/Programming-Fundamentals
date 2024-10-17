@@ -22,7 +22,7 @@ int main()
     srand(time(0));
 
     int n;
-    cout << "Введіть кількість рівнів ялинки: ";
+    cout << "Enter number of layers: " << endl;
     cin >> n;
 
     for (int level = 1; level <= n; level++)
