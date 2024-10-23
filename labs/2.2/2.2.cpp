@@ -5,7 +5,6 @@
 
  */
 #include <iostream>
-#include <cmath>
 #include <vector>
 using namespace std;
 enum Names
@@ -29,11 +28,9 @@ struct Student
     int yearsofstudy;
     bool stipend;
 };
-
 int main()
 {
     Students myStudents[7];
-
     myStudents[0] = {Tom, 21, 1};
     myStudents[1] = {David, 18, 2};
     myStudents[2] = {Kate, 5, 3};

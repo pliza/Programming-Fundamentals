@@ -29,15 +29,14 @@ int main()
     {
         int rows = level + 2;
         int col = 2 * n + 3;
-        int nm = n;
         vector<vector<char>> tree(rows, vector<char>(col, ' '));
         for (int row = 1; row <= rows; row++)
         {
             for (int star = 1; star <= 2 * row - 1; star++)
             {
-
                 if (rand() % 5 == 0)
                 {
+
                     char toy = toys[rand() % toys.length()];
                     tree[row - 1][n + star + 1 - row] = toy;
                 }
