@@ -7,7 +7,6 @@
 #include <vector>
 #include <string>
 #include <fstream> // Для роботи з файлами
-
 using namespace std;
 
 int main()
